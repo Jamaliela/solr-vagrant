@@ -1,0 +1,7 @@
+# ignore Apple OSX artifacts
+.DS_Store
+
+# ignore .vagrant/ directories
+.vagrant/
+*.box
+*.log
