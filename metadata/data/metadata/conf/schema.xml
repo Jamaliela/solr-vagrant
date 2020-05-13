@@ -125,12 +125,12 @@
     <!-- Just like the author_email field, this most likely should have 
     lowercase filtering on it. -->
     <field name="doi" type="string" indexed="true" stored="true" multiValued="false"/>
-    <field name="author" type="text_general" indexed="true" stored="true" multiValued="true"/>
+    <field name="authors" type="text_general" indexed="true" stored="true" multiValued="true"/>
     <!-- emails are interesting critters.  'string' was used here, but the field should most likely be something like string with lowercase filtering and
     some sort of tokinizer. -->
-    <field name="author_email" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="author_emails" type="string" indexed="true" stored="true" multiValued="true"/>
     <!-- keyword(s) will most likely be a facet of some sort. Perhaps we should store the keyword values in different ways? -->
-    <field name="keyword" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="keywords" type="string" indexed="true" stored="true" multiValued="true"/>
     <!-- Spatial search information:
     https://lucene.apache.org/solr/guide/8_5/spatial-search.html 
     More information is in the wiki:
@@ -141,6 +141,8 @@
     <field name="authoritative_source_url" type="string" indexed="true" stored="true" multiValued="false"/>
     <!-- This represents the actual location of the iso xml file on disk. -->
     <field name="authoritative_source_location_on_disk" type="string" indexed="true" stored="true" multiValued="false"/>
+
+    <field name="authoritative_source_md5" type="string" indexed="false" stored="true" multiValued="false"/>
 
     <!-- Uncommenting the following will create a "timestamp" field using
     a default value of "NOW" to indicate when each document was indexed. -->
