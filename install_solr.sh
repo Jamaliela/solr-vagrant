@@ -3,8 +3,7 @@
 SOLR_VERSION=8.5.2
 
 # Explain how to find this link to update as needed.
-wget https://apache.cs.utah.edu/lucene/solr/$SOLR_VERSION/solr-$SOLR_VERSION.tgz
-wget http://apache.mirrors.hoobly.com/lucene/solr/$SOLR_VERSION/solr-$SOLR_VERSION.tgz
+wget -nv https://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/solr-$SOLR_VERSION.tgz
 
 # Extract install script.
 tar xzf solr-$SOLR_VERSION.tgz solr-$SOLR_VERSION/bin/install_solr_service.sh --strip-components=2
