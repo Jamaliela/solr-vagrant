@@ -136,6 +136,8 @@
     More information is in the wiki:
     https://cwiki.apache.org/confluence/display/solr/SpatialSearch -->
     <field name="bounding_box" type="bbox" indexed="true" stored="true" multiValued="false"/>
+    <!-- This represents the type of the resource which can be dataset or publication -->
+    <field name="resource_type" type="string" indexed="true" stored="true" multiValued="false"/>
     <!-- This represents the actual location of the record being stored.
     This most likely should NOT be indexed, but it is for now just in case. -->
     <field name="authoritative_source_url" type="string" indexed="true" stored="true" multiValued="false"/>
