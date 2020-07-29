@@ -23,6 +23,6 @@ https://github.com/sprotheroe/vagrant-disksize
 To create a docker instance for Solr
 
 Run on command line:
-
+```
 docker run -d -v "<path-to-metadata-config-folder>:/var/solr" -p 8983:8983 --name <container-name> solr:8.5.2 solr-precreate <core-name>
-
+```
